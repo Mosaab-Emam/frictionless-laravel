@@ -7,3 +7,4 @@ php artisan key:generate
 cd .devcontainer/db && docker-compose up -d && cd ../..
 sleep 3
 php artisan migrate:fresh --seed
+php artisan storage:link

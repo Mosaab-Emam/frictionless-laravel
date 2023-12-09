@@ -6,7 +6,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: sudo apt-get update && composer install && npm install && cp .env.example .env && php artisan key:generate && mysql -e "CREATE DATABASE laravel;" && php artisan migrate:fresh --seed
+  - init: sudo apt-get update && composer install && npm install && cp .env.example .env && php artisan key:generate && mysql -e "CREATE DATABASE laravel;" && php artisan migrate:fresh --seed && php artisan storage:link
     command: npm run dev & php artisan serve
 
 vscode:
